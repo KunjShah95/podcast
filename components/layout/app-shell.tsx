@@ -6,13 +6,11 @@ import Header from "@/components/layout/header";
 import Player from "@/components/podcast/player";
 
 const marketingRoutes = ["/", "/features", "/pricing", "/about", "/contact", "/login", "/signup", "/forgot-password"];
-const authRoutes = ["/login", "/signup", "/forgot-password"];
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   
   const isMarketingPage = marketingRoutes.some(route => route === pathname);
-  const isAuthPage = authRoutes.includes(pathname);
 
   // Marketing pages (including landing) - no sidebar
   if (isMarketingPage) {

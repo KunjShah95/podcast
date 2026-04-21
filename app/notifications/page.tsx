@@ -8,7 +8,6 @@ import {
   Plus,
   UserPlus,
   TrendingUp,
-  Calendar,
   Check,
   Trash2,
   Settings,

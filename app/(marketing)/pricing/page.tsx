@@ -7,11 +7,8 @@ import {
   Check,
   ArrowLeft,
   Sparkles,
-  Zap,
-  BarChart3,
   Crown,
   Mic,
-  Users,
 } from "lucide-react";
 
 const plans = [

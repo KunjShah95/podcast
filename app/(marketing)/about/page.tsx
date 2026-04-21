@@ -4,13 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import MarketingNavbar from "@/components/layout/marketing-navbar";
 import {
-  Play,
   ArrowLeft,
   Heart,
   Users,
   Globe,
   Sparkles,
-  Zap,
 } from "lucide-react";
 
 const values = [
@@ -109,7 +107,7 @@ export default function AboutPage() {
             </Link>
             
             <h1 className="font-display text-5xl lg:text-6xl font-bold text-white leading-tight">
-              We're on a mission to
+              We&apos;re on a mission to
               <span className="block text-[#FF6B35]">
                 change podcasting
               </span>
@@ -231,7 +229,7 @@ export default function AboutPage() {
               Join us on our mission
             </h2>
             <p className="text-white/50 mb-8 max-w-lg mx-auto">
-              Whether you're a listener or creator, there's a place for you in the Podcastr community.
+              Whether you&apos;re a listener or creator, there&apos;s a place for you in the Podcastr community.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

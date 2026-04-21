@@ -9,7 +9,6 @@ import {
   Mic,
   Zap,
   Globe,
-  Shield,
   Download,
   Radio,
   TrendingUp,
@@ -17,8 +16,6 @@ import {
   BarChart3,
   Clock,
   Heart,
-  Share2,
-  ArrowLeft,
 } from "lucide-react";
 
 const features = [
@@ -69,7 +66,7 @@ const creatorFeatures = [
   {
     icon: Users,
     title: "Audience Insights",
-    description: "Understand who your listeners are, where they're from, and what episodes resonate most.",
+    description: "Understand who your listeners are, where they&apos;re from, and what episodes resonate most.",
   },
   {
     icon: Radio,
@@ -114,7 +111,7 @@ export default function FeaturesPage() {
             </h1>
             
             <p className="mt-6 text-xl text-white/50 max-w-2xl mx-auto">
-              Every feature we've built is designed to make your podcast experience more enjoyable, more personalized, and more seamless.
+              Every feature we&apos;ve built is designed to make your podcast experience more enjoyable, more personalized, and more seamless.
             </p>
           </div>
         </section>
@@ -229,7 +226,7 @@ export default function FeaturesPage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {creatorFeatures.map((feature, index) => (
+              {creatorFeatures.map((feature) => (
                 <div
                   key={feature.title}
                   className="group rounded-3xl bg-[#1A1F2E] border border-white/5 p-6 transition-all duration-300 hover:border-[#FF6B35]/30"

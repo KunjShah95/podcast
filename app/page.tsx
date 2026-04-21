@@ -1,20 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import {
   Play,
   ChevronRight,
-  Star,
-  Users,
   Headphones,
   TrendingUp,
   Sparkles,
   Mic,
-  Radio,
-  Zap,
-  Shield,
   Globe,
+  Zap,
   ArrowRight,
   Menu,
   X,
@@ -204,10 +201,11 @@ export default function LandingPage() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative aspect-square">
-                  <img
+                  <Image
                     src={podcast.cover}
                     alt={podcast.title}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -238,7 +236,7 @@ export default function LandingPage() {
                 <span className="block text-[#FF6B35]">listening better</span>
               </h2>
               <p className="mt-4 text-lg text-white/50">
-                From AI-powered recommendations to seamless cross-device sync, we've built every feature with listeners in mind.
+                From AI-powered recommendations to seamless cross-device sync, we&apos;ve built every feature with listeners in mind.
               </p>
               
               <div className="mt-8 space-y-4">

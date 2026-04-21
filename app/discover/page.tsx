@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import PodcastCard from "@/components/podcast/podcast-card";
-import { Search, SlidersHorizontal, X, Clock, TrendingUp, Mic, Play, Calendar, Filter } from "lucide-react";
+import { Search, X, Filter } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const filterOptions = {
@@ -105,8 +105,6 @@ const podcasts = [
 export default function DiscoverPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
-  const [showFilters, setShowFilters] = useState(true);
-
   const toggleFilter = (filter: string) => {
     setSelectedFilters((prev) =>
       prev.includes(filter)

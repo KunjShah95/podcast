@@ -9,10 +9,8 @@ import {
   Shield,
   User,
   Palette,
-  Globe,
   HelpCircle,
   Info,
-  ChevronRight,
 } from "lucide-react";
 
 const settingsNav = [

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Bell, Mail, Smartphone, Save, Check } from "lucide-react";
+import { Bell, Mail, Smartphone, Save } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function NotificationSettingsPage() {
@@ -32,14 +32,18 @@ export default function NotificationSettingsPage() {
     inAppNotifications: true,
   });
 
-  const updateSetting = (section: string, key: string, value: any) => {
-    setSettings((prev: any) => ({
-      ...prev,
-      [section]: {
-        ...prev[section],
-        [key]: value,
-      },
-    }));
+  const updateSetting = (section: string, key: string, value: string | number | boolean) => {
+    setSettings((prev) => {
+      const sectionKey = section as keyof typeof prev;
+      const currentSection = prev[sectionKey] as Record<string, unknown>;
+      return {
+        ...prev,
+        [sectionKey]: {
+          ...currentSection,
+          [key]: value,
+        },
+      };
+    });
   };
 
   const frequencies = [
@@ -226,7 +230,7 @@ export default function NotificationSettingsPage() {
                 Resume Incomplete Episodes
               </h2>
               <p className="text-sm text-muted-foreground">
-                Get reminded to finish episodes you've started
+                Get reminded to finish episodes you&apos;ve started
               </p>
             </div>
           </div>

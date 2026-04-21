@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import MarketingNavbar from "@/components/layout/marketing-navbar";
 import {
-  Play,
   Mail,
   ArrowLeft,
   Check,
@@ -37,7 +36,7 @@ export default function ForgotPasswordPage() {
               Check your email
             </h1>
             <p className="text-white/50 mb-8">
-              We've sent password reset instructions to <span className="text-white">{email}</span>
+              We&apos;ve sent password reset instructions to <span className="text-white">{email}</span>
             </p>
             <Link
               href="/login"
@@ -69,7 +68,7 @@ export default function ForgotPasswordPage() {
               Forgot password?
             </h1>
             <p className="text-white/50">
-              No worries, we'll send you reset instructions
+              No worries, we&apos;ll send you reset instructions
             </p>
           </div>
 
@@ -103,7 +102,7 @@ export default function ForgotPasswordPage() {
           </form>
 
           <p className="mt-8 text-center text-white/50">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/signup" className="text-[#FF6B35] font-semibold hover:text-[#FF8A4D] transition-colors">
               Sign up free
             </Link>

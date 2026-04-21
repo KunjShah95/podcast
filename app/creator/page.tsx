@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image";
 import Link from "next/link";
 import PodcastCard from "@/components/podcast/podcast-card";
@@ -7,11 +8,9 @@ import {
   MoreHorizontal,
   Verified,
   TrendingUp,
-  Users,
   Headphones,
   BarChart3,
   Calendar,
-  Globe,
   Star,
 } from "lucide-react";
 
@@ -278,7 +277,7 @@ export default function CreatorProfilePage() {
             Monthly Listeners
           </h3>
           <div className="h-48 flex items-end gap-2">
-            {analyticsData.monthlyListeners.map((data, index) => (
+            {analyticsData.monthlyListeners.map((data) => (
               <div key={data.month} className="flex-1 flex flex-col items-center gap-2">
                 <div
                   className="w-full bg-primary/80 rounded-t-lg transition-all hover:bg-primary"
@@ -296,7 +295,7 @@ export default function CreatorProfilePage() {
             Top Countries
           </h3>
           <div className="space-y-4">
-            {analyticsData.topCountries.map((country, index) => (
+            {analyticsData.topCountries.map((country) => (
               <div key={country.country} className="space-y-1">
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-foreground">{country.country}</span>

@@ -1,14 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image";
-import Link from "next/link";
 import PodcastCard from "@/components/podcast/podcast-card";
 import {
   Play,
-  Pause,
   Plus,
   Share2,
   MoreHorizontal,
   Heart,
-  Download,
   Clock,
   Calendar,
   Star,

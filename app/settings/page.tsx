@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Globe, Volume2, Play, Pause, SkipForward, Save } from "lucide-react";
+import { Globe, Volume2, Play, SkipForward, Save } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function GeneralSettingsPage() {

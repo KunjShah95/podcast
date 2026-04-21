@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import PodcastCard from "@/components/podcast/podcast-card";
@@ -10,7 +9,6 @@ import {
   Headphones,
   Play,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const categoryData: Record<string, {
   name: string;

@@ -26,7 +26,6 @@ export default function ProfileSettingsPage() {
     joinedDate: "January 2024",
   });
 
-  const [isVerified, setIsVerified] = useState(false);
   const [connectedAccounts, setConnectedAccounts] = useState({
     google: true,
     twitter: false,

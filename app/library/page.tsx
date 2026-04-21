@@ -1,5 +1,6 @@
+import Image from "next/image";
 import PodcastCard from "@/components/podcast/podcast-card";
-import { Play, Heart, Clock, Download, History } from "lucide-react";
+import { Play, Heart, Clock, Download } from "lucide-react";
 
 const playlists = [
   {
@@ -124,10 +125,11 @@ export default function LibraryPage() {
               className="group relative overflow-hidden rounded-2xl bg-card border border-border/20 transition-all hover:border-primary/30 hover:scale-[1.02]"
             >
               <div className="aspect-square relative">
-                <img
+                <Image
                   src={playlist.coverImage}
                   alt={playlist.title}
-                  className="h-full w-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -168,10 +170,12 @@ export default function LibraryPage() {
               className="flex flex-col items-center gap-2 flex-shrink-0"
             >
               <div className="h-20 w-20 rounded-full overflow-hidden ring-4 ring-card hover:ring-primary transition-all">
-                <img
+                <Image
                   src={creator.avatar}
                   alt={creator.name}
-                  className="h-full w-full object-cover"
+                  width={80}
+                  height={80}
+                  className="object-cover"
                 />
               </div>
               <span className="text-sm text-foreground">{creator.name}</span>

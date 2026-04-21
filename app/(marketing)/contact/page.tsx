@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import MarketingNavbar from "@/components/layout/marketing-navbar";
 import {
-  Play,
   ArrowLeft,
   Mail,
   MapPin,
@@ -85,7 +84,7 @@ export default function ContactPage() {
             </h1>
             
             <p className="mt-6 text-xl text-white/50 max-w-xl mx-auto">
-              Have a question or feedback? We'd love to hear from you. Our team is here to help.
+              Have a question or feedback? We&apos;d love to hear from you. Our team is here to help.
             </p>
           </div>
         </section>
@@ -118,7 +117,7 @@ export default function ContactPage() {
                     <Send className="h-10 w-10" />
                   </div>
                   <h3 className="font-display text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-white/50 mb-6">We'll get back to you as soon as possible.</p>
+                  <p className="text-white/50 mb-6">We&apos;ll get back to you as soon as possible.</p>
                   <button
                     onClick={() => setSubmitted(false)}
                     className="text-[#FF6B35] hover:underline"

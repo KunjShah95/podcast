@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import MarketingNavbar from "@/components/layout/marketing-navbar";
 import {
-  Play,
   Mail,
   Lock,
   User,

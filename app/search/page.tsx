@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import PodcastCard from "@/components/podcast/podcast-card";
@@ -108,7 +109,7 @@ function SearchResultsContent() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="font-display text-2xl font-bold text-foreground">
-            Results for "{query}"
+            Results for &quot;{query}&quot;
           </h1>
           <p className="text-sm text-muted-foreground mt-1">
             Found {podcasts.length + creators.length + episodes.length} results
@@ -181,10 +182,12 @@ function SearchResultsContent() {
                 href={`/creator`}
                 className="group flex items-center gap-4 rounded-2xl bg-card p-4 border border-border/20 transition-all hover:border-primary/30"
               >
-                <img
+                <Image
                   src={creator.avatar}
                   alt={creator.name}
-                  className="h-14 w-14 rounded-full object-cover"
+                  width={56}
+                  height={56}
+                  className="rounded-full object-cover"
                 />
                 <div>
                   <p className="font-medium text-foreground group-hover:text-primary transition-colors">
@@ -251,7 +254,7 @@ function SearchResultsContent() {
             No results found
           </h3>
           <p className="text-muted-foreground text-center max-w-md">
-            Try different keywords or browse by category to find what you're looking for.
+            Try different keywords or browse by category to find what you&apos;re looking for.
           </p>
         </div>
       )}

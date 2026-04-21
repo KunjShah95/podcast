@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -10,12 +10,6 @@ interface Toast {
   id: string;
   type: ToastType;
   message: string;
-}
-
-interface ToastContextType {
-  toasts: Toast[];
-  addToast: (type: ToastType, message: string) => void;
-  removeToast: (id: string) => void;
 }
 
 export function useToast() {

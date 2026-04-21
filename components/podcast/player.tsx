@@ -14,7 +14,6 @@ import {
   Heart,
   Share2,
   Maximize2,
-  Minimize2,
   MoreHorizontal,
 } from "lucide-react";
 
@@ -33,7 +32,7 @@ export default function Player({ episode, className }: PlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
-  const [volume, setVolume] = useState(75);
+  const [volume] = useState(75);
 
   const progress = episode ? (episode.currentTime / episode.duration) * 100 : 0;
   const currentTimeDisplay = episode ? formatTime(episode.currentTime) : "0:00";
